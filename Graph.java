@@ -33,9 +33,11 @@ public class Graph {
         for(int row = 0; row < adjacencyMatrix.length; row++) {
             for(int col = row; col < adjacencyMatrix.length; col++) {
                 if(adjacencyMatrix[row][col] != -1 && adjacencyMatrix[row][col] != 0) {
-                    edge[count].setBegin(row);
-                    edge[count].setEnd(col);
-                    edge[count].setWeight(adjacencyMatrix[row][col]);
+                    //edge[count].setBegin(row);
+                    //edge[count].setEnd(col);
+                    //edge[count].setWeight(adjacencyMatrix[row][col]);
+                    edge[count] = new Edge(row, col,adjacencyMatrix[row][col]);
+                    count++;
                 }
             }
         }

@@ -1,15 +1,25 @@
 import java.util.Random;
+import java.util.Vector;
 
 public class Main {
     public static void main(String[] args) {
         boolean dense = true;
         boolean sparse = false;
 
-        int [][] matrix1 = adjacencyMatrix(4, dense);
-        int [][] matrix2 = adjacencyMatrix(4, sparse);
+        Kruskal kruskalMST = new Kruskal();
+
+        int [][] matrix1 = adjacencyMatrix(6, dense);
+        //int [][] matrix2 = adjacencyMatrix(6, sparse);
+
+        Graph graph1 = new Graph(matrix1);
 
         display(matrix1);
-        display(matrix2);
+        //display(matrix2);
+
+        Vector<Edge> result = kruskalMST.kruskalMST(graph1);
+        displayGraph(result);
+
+
     }
 
     private static int[][] adjacencyMatrix(int size, boolean typeOfGraph) {
@@ -66,6 +76,12 @@ public class Main {
                 System.out.print(matrix[row][col] + " ");
             }
             System.out.println();
+        }
+    }
+
+    private static void displayGraph(Vector<Edge> mst) {
+        for(int index = 0; index < mst.size(); index++) {
+            System.out.println("(" + mst.get(index).getBegin() + ", " + mst.get(index).getEnd() + ")");
         }
     }
 
