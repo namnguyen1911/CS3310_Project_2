@@ -5,9 +5,11 @@ public class Main {
         boolean dense = true;
         boolean sparse = false;
 
-        int [][] matrix = adjacencyMatrix(4, dense);
+        int [][] matrix1 = adjacencyMatrix(4, dense);
+        int [][] matrix2 = adjacencyMatrix(4, sparse);
 
-        display(matrix);
+        display(matrix1);
+        display(matrix2);
     }
 
     private static int[][] adjacencyMatrix(int size, boolean typeOfGraph) {
@@ -66,5 +68,5 @@ public class Main {
             System.out.println();
         }
     }
-    
+
 }
