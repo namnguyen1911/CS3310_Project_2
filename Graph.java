@@ -86,10 +86,6 @@ public class Graph {
         return edge;
     }
 
-    public void setEdge(Edge[] newEdge) {
-        edge = newEdge;
-    }
-
     // private void merge(Edge arr[], int l, int m, int r)
     // {
     //     // Find sizes of two subarrays to be merged
