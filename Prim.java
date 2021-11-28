@@ -30,7 +30,7 @@ public class Prim {
                 }  
             }
 
-            Edge edge = new Edge(vmin,prev[index],cost[vmin]);
+            Edge edge = new Edge(prev[vmin],vmin,cost[vmin]);
             x.add(edge);
             prev[vmin] = -1;
 
@@ -46,8 +46,6 @@ public class Prim {
                     
                 }
             }
-
-            //display(cost, prev);
         }
 
 
