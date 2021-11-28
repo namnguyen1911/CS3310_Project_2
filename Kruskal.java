@@ -10,7 +10,7 @@ public class Kruskal {
 
         //Sort edges
         Edge[] sortedEdge = graph.getEdge();
-        sort(sortedEdge,0,set.length -1);
+        sort(sortedEdge,0,sortedEdge.length - 1);
 
         //Find
         for(int index = 0; index < sortedEdge.length; index++) {
