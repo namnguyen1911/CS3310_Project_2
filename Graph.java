@@ -76,6 +76,10 @@ public class Graph {
         return edge[index];
     }
 
+    public int getNumberOfEdge() {
+        return edge.length;
+    }
+
     public int getVertex(int index) {
         return vertices[index];
     }
