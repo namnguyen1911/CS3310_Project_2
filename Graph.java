@@ -76,8 +76,8 @@ public class Graph {
         return edge[index];
     }
 
-    public int getNumberOfEdge() {
-        return edge.length;
+    public int getNumberOfVertices() {
+        return vertices.length;
     }
 
     public int getVertex(int index) {
