@@ -14,12 +14,12 @@ public class Graph {
 
         //Make set
         for(int index = 0; index < adjacencyMatrix.length; index++) {
-            vertices[index] = index + 1;
+            vertices[index] = index;
         }
 
         //Find number of edges
         for(int row = 0; row < adjacencyMatrix.length; row++) {
-            for(int col = 0; col < adjacencyMatrix.length; col++) {
+            for(int col = row; col < adjacencyMatrix.length; col++) {
                 if(adjacencyMatrix[row][col] != -1 && adjacencyMatrix[row][col] != 0) {
                     count++;
                 }

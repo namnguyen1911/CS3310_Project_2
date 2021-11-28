@@ -53,7 +53,7 @@ public class Main {
         //Dense graph (7:3)
         if(typeOfGraph == true ) {
             if(number <= 7) {
-                return rand.nextInt(100);
+                return rand.nextInt(99) + 1;
             }
             else {
                 return -1;
@@ -62,7 +62,7 @@ public class Main {
         //Sparse graph (3:7)
         else {
             if(number >= 7) {
-                return rand.nextInt(100);
+                return rand.nextInt(99) + 1;
             }
             else {
                 return -1;

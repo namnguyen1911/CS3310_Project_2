@@ -16,7 +16,7 @@ public class Kruskal {
         for(int index = 0; index < sortedEdge.length; index++) {
             a = find(set, sortedEdge[index].getBegin());
             b = find(set, sortedEdge[index].getEnd());
-            if(a != b) {
+            if(a.getTop() != b.getTop()) {
                 x.add(sortedEdge[index]);
                 union(set, a, b);
             }
